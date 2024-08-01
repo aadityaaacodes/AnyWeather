@@ -1,0 +1,15 @@
+{
+    "searchData": {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India"
+    },
+    "weatherData": {
+        "temperature": "29",
+        "condition": "Haze",
+        "windspeed": "13 km/h",
+        "humidity": "76%",
+        "precipitation": "24%"
+    }
+}
+
