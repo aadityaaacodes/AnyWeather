@@ -14,7 +14,6 @@ def putInfo(dumpFile):
     with open(json_path, 'w') as jFile:
         return(json.dump(dumpFile, jFile, indent=4))
 
-
 def performGoogleSearch():
     # JSON -> Dictionary
     x = getInfo() 
