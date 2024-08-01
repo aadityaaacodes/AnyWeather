@@ -1,8 +1,17 @@
-import json
+from extractor import getInfo, putInfo
 
 json_path = 'dataStorage.json'
 
-def putInfo(dumpFile):
-    with open(json_path, 'w') as jFile:
-        return(json.dump(dumpFile, jFile, indent=4))
+x = getInfo()
+y = x["searchData"]
+
     
+def queryDumper(info):
+    c = 0
+    for i in y:
+        y[i] = info[c]
+        c += 1
+    putInfo(x)
+
+# li = ["Cincinnati", "Ohio", "USA"]
+# queryDumper(li)

@@ -1,8 +1,8 @@
 {
     "searchData": {
-        "city": "Mumbai",
-        "state": "Maharashtra",
-        "country": "India"
+        "city": "Cincinnati",
+        "state": "Ohio",
+        "country": "USA"
     },
     "weatherData": {
         "temperature": "29",
@@ -12,4 +12,3 @@
         "precipitation": "24%"
     }
 }
-
