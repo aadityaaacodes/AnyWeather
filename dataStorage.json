@@ -5,10 +5,10 @@
         "country": "USA"
     },
     "weatherData": {
-        "temperature": "29",
-        "condition": "Haze",
-        "windspeed": "13 km/h",
-        "humidity": "76%",
-        "precipitation": "24%"
+        "temperature": "22",
+        "condition": "Sunny",
+        "windspeed": "3 km/h",
+        "humidity": "95%",
+        "precipitation": "13%"
     }
 }
