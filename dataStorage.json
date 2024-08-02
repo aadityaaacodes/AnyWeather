@@ -5,11 +5,17 @@
         "country": ""
     },
     "weatherData": {
-        "temperature": "22",
-        "condition": "Haze",
-        "windspeed": "3 km/h",
-        "humidity": "95%",
-        "precipitation": "13%", 
-        "aqi" : "47"
+        "locale": "Cincinnati, OH, United States",
+        "dawn": "06:39",
+        "dusk": "20:47",
+        "temperature": "23",
+        "condition": "Fog",
+        "windspeed": "10 km/h",
+        "humidity": "93%",
+        "precipitation": "16%",
+        "aqi": "25",
+        "pressure": "1012.5 mb",
+        "visibility": "2.41 km",
+        "uv": "0 of 11"
     }
 }

@@ -5,7 +5,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def default():
-    return(render_template('weather.html'))
+    imageLibrary = {
+        "sunny" : "", 
+        "windy" : "",
+        "cloudy" : "", 
+        None : "" 
+    }
+    return(render_template('weather.html', IMG_URL=imageLibrary["cloudy"]))
 
 
 @app.route('/home')
