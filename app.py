@@ -17,6 +17,7 @@ def default():
             "Hail" : "https://i.gifer.com/Cba.gif",
             "Cloudy" : "https://i.gifer.com/srG.gif", 
             "Rain" : "https://i.gifer.com/AcU9.gif",
+            "Haze" : "https://i.gifer.com/7Z6Q.gif",
             None : "" 
         }
 
@@ -34,7 +35,7 @@ def default():
         searchData = x['searchData']
         searchData['city'] = query
         putInfo(x)
-        performGoogleSearch(query=f'{query}')
+        performGoogleSearch(query=f"{query}")
         return (redirect(url_for('default')))
 
 
