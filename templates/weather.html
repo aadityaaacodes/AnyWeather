@@ -7,12 +7,14 @@ Mumbai
 {% block body %}
 
 <div class="main">
-
+    <p hidden>
+        {{info}}
+    </p>
     <div class="picture">
         <div class="vital">
 
             <div class="temp">
-                <h1>21 *C</h1>
+                <h1>{{info['temperature']}} *C</h1>
             </div>
             
             <div class="time">
@@ -20,7 +22,7 @@ Mumbai
             </div>
 
             <div class="cond">
-                <h1>Sunny</h1>
+                <h1>{{info['condition']}}</h1>
             </div>
 
         </div>
@@ -37,7 +39,7 @@ Mumbai
     <div class="first">
 
         <div class="dawn">
-            <h1> Dawn <br> 6:03 </h1>
+            <h1> Dawn <br> {{info['dawn']}} </h1>
         </div>
 
         <div class="city">
@@ -45,7 +47,7 @@ Mumbai
         </div>
 
         <div class="dusk">
-            <h1 > Dusk <br> 18:56 </h1>
+            <h1 > Dusk <br> {{info['dusk']}} </h1>
         </div>
 
     </div>
@@ -54,17 +56,17 @@ Mumbai
 
         <div class="aqi">
             <h2>
-                AQI: 54 <br> Safe
+                AQI: {{info['aqi']}} <br> Safe
             </h2>
         </div>
 
         <div class="precise">
-            <h2>Santa Cruz IMD Station, Mumbai, Maharashtra</h2>
+            <h2>{{info['locale']}}</h2>
         </div>
 
         <div class="uv">
             <h2>
-                UV: 8/11 <br> Stay Indoors
+                UV: {{info['uv']}} <br> Stay Indoors
             </h2>
         </div>
 
@@ -73,36 +75,36 @@ Mumbai
     <div class="third">
         <div class="highT">
             <h2>
-                High: <br> 38*C
+                Precipitation: <br> {{info['precipitation']}}
             </h2>
         </div>
 
         <div class="lowT">
             <h2>
-                Low: <br> 28*C
+                Visibility: <br> {{info['visibility']}}
             </h2>
         </div>
 
         <div class="humidity">
             <h2>
-                Humidity:<br> 63%
+                Humidity:<br> {{info['humidity']}}
             </h2>
         </div>
 
         <div class="wind">
-            <h2>Wind Speed:<br> 8 kmph</h2>
+            <h2>Wind Speed:<br> {{info['windspeed']}}</h2>
         </div>
 
         <div class="pressure">
             <h2>
-                Pressure: <br> 1080 mb
+                Pressure: <br> {{info['pressure']}}
             </h2>
         </div>
     </div>
 
     <div class="search">
         <div class="srch">
-            <form>
+            <form method="POST">
                 <input type="search">
                 <input type="submit">
             </form>
