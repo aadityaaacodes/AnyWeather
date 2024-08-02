@@ -67,9 +67,6 @@ def performGoogleSearch(query):
     # dumping JSON file to save changes
     putInfo(x)
 
-def getLocation():
-    x = getInfo()
-    return(x)
 
 
 # performGoogleSearch(query="Cincinnati")
