@@ -1,22 +1,22 @@
 {
     "searchData": {
-        "city": "Toronto",
+        "city": "Cincinnati",
         "state": "",
         "country": ""
     },
     "weatherData": {
-        "locale": "Downtown Toronto, Ontario, Canada",
-        "dawn": "06:08",
-        "dusk": "20:38",
+        "locale": "Cincinnati, OH, United States",
+        "dawn": "06:39",
+        "dusk": "20:47",
         "temperature": "26",
-        "condition": "Sunny",
-        "windspeed": "11 km/h",
-        "humidity": "84%",
-        "precipitation": "49%",
-        "aqi": "45",
-        "pressure": "1011.5 mb",
+        "condition": "Cloudy",
+        "windspeed": "8 km/h",
+        "humidity": "83%",
+        "precipitation": "17%",
+        "aqi": "25",
+        "pressure": "1012.5 mb",
         "visibility": "12.87 km",
-        "uv": "4 of 11",
+        "uv": "1 of 11",
         "city": "Mumbai"
     }
 }

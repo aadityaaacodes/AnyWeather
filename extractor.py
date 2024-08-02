@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import json
@@ -17,8 +18,13 @@ def putInfo(dumpFile):
 def performGoogleSearch(query):
     # JSON -> Dictionary
     x = getInfo() 
-    searchData = x['searchData']
     weatherData = x['weatherData']
+
+    # Bot setup to not use GUI & Shared Memory
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  # Ensure GUI is off
+    chrome_options.add_argument("--no-sandbox")
+    # chrome_options.add_argument("--disable-dev-shm-usage")
 
     # starting selenium bot
     service = Service(executable_path='venv/bin/chromedriver')
