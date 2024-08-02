@@ -1,0 +1,126 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(7, 6, 14);
+}
+
+.main{
+    width: 50%;
+    border: 2px;
+    border-color: aliceblue;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(179, 110, 248);
+}
+
+
+/* topmost Layer */
+.vital{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.temp, .time, .cond{
+    flex: 1;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.image{
+    flex: 2;
+    width: auto;
+    height: auto;
+}
+
+.warning{
+    flex: 1;
+    color: red;
+    background-color: black;
+}
+
+.picture{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* First layer */
+.first{
+    display: flex;
+}
+
+.city{
+    flex: 3;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.dawn, .dusk{
+    flex: 1;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+/* Second layer */
+.second{
+    display: flex;
+    
+}
+
+.aqi{
+    flex: 1;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.precise{
+    flex: 2;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.uv{
+    flex: 1;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+/* Third Layer */
+.third{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.highT, .lowT, .humidity, .wind, .pressure{
+    flex: 1;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+/* Last Layer */
+.search{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}

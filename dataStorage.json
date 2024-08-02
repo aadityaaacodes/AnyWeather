@@ -1,14 +1,15 @@
 {
     "searchData": {
-        "city": "Cincinnati",
-        "state": "Ohio",
-        "country": "USA"
+        "city": "Mumbai",
+        "state": "",
+        "country": ""
     },
     "weatherData": {
         "temperature": "22",
-        "condition": "Sunny",
+        "condition": "Haze",
         "windspeed": "3 km/h",
         "humidity": "95%",
-        "precipitation": "13%"
+        "precipitation": "13%", 
+        "aqi" : "47"
     }
 }

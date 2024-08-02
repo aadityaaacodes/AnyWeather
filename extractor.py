@@ -43,5 +43,9 @@ def performGoogleSearch():
     # dumping JSON file to save changes
     putInfo(x)
 
+def getLocation():
+    x = getInfo()
+    return(x)
+
 
 # performGoogleSearch()
