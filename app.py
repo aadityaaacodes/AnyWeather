@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from extractor import getInfo, performGoogleSearch
 
 app = Flask(__name__)
@@ -15,9 +15,10 @@ def default():
             None : "" 
         }
         return(render_template('weather.html', IMG_URL=imageLibrary["cloudy"], info=weatherData))
-    else:
-        return("hello")
-
+    elif request.method == 'POST':
+        query = request.form.get('query')
+        performGoogleSearch(query=f'{query}')
+        return (redirect(url_for('default')))
 
 
 if __name__ == '__main__':

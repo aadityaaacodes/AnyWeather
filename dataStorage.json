@@ -9,13 +9,13 @@
         "dawn": "06:39",
         "dusk": "20:47",
         "temperature": "24",
-        "condition": "Fog",
+        "condition": "Cloudy",
         "windspeed": "10 km/h",
-        "humidity": "90%",
+        "humidity": "88%",
         "precipitation": "17%",
         "aqi": "25",
         "pressure": "1012.5 mb",
-        "visibility": "12.87 km",
-        "uv": "1 of 11"
+        "visibility": "14.48 km",
+        "uv": "2 of 11"
     }
 }
