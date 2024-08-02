@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import json, os
@@ -21,31 +20,27 @@ def performGoogleSearch(query):
     x = getInfo() 
     weatherData = x['weatherData']
 
-    # Bot setup to not use GUI & Shared Memory
+    # Bot setup to be Headless
     chrome_options = Options()
     chrome_options.headless = True
-    chrome_options.add_argument("--headless")  # Ensure GUI is off
+    chrome_options.add_argument("--headless")  
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--start-maximized")
-    # chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")  # Set window size
+    chrome_options.add_argument("--window-size=1920,1080")  
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--allow-running-insecure-content')
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--proxy-server='direct://'")
     chrome_options.add_argument("--proxy-bypass-list=*")
-    # chrome_options.add_argument(f'user-agent={user_agent}')
     chrome_options.add_argument('--disable-gpu')
 
-
-
-    # starting selenium bot
+    # Starting selenium bot
     service = Service(executable_path='venv/bin/chromedriver')
     # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
-    # performing google search
+    # Performing google search
     driver.get("https://www.google.com/")
     bar = driver.find_element(By.CLASS_NAME, "gLFyf")
     bar.send_keys(f"{query} Weather", Keys.RETURN)
@@ -58,7 +53,7 @@ def performGoogleSearch(query):
     weatherData["windspeed"] = (driver.find_element(By.ID, "wob_ws")).text
     weatherData["condition"] = (driver.find_element(By.ID, "wob_dc")).text
 
-    # clicking button to weather.com
+    # Clicking button to weather.com
     anchor = driver.find_element(By.LINK_TEXT, "weather.com")
     anchor.click()
 
@@ -81,19 +76,16 @@ def performGoogleSearch(query):
     weatherData['visibility'] = (driver.find_elements(By.CSS_SELECTOR, "span[data-testid = 'VisibilityValue']"))[0].text
 
 
-    # shutting bot
+    # Shutting bot
     driver.quit
 
-    # dumping JSON file to save changes
+    # Dumping JSON file to save changes
     putInfo(x)
-    # print((getInfo())['weatherData'])
 
-    # deleting images
+    # Deleting images
     os.remove("google.png")
     os.remove("weather.png")
 
 
-
+# # TEST RUN:
 # performGoogleSearch(query="Cincinnati")
-
-# performGoogleSearch("Los Angeles")
